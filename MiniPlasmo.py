@@ -414,7 +414,7 @@ def show_orthologues(gene_id):
 
 
 
-
+# For future implementation of literature information
 def show_literature(gene_id):
     
     pass
