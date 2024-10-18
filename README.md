@@ -81,7 +81,7 @@ The repository is structured as follows:
    ```bash
    pip install -r requirements.txt
    ```
-4. **Download the reference files and copy them into the ref_files folder**
+4. **Download the reference files and copy them into the ref_files folder:**
    See INSTRUCTIONS_ref_files_Download.txt in the ref_file folder
    
 5. **Run the Tool:**
