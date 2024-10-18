@@ -82,14 +82,15 @@ The repository is structured as follows:
    pip install -r requirements.txt
    ```
 4. **Download the reference files and copy them into the ref_files folder:**
+
    See INSTRUCTIONS_ref_files_Download.txt in the ref_file folder
    
-5. **Run the Tool:**
+6. **Run the Tool:**
    ```bash
    python malaria_gene_info_tool.py
    ```
 
-6. **Follow the Interactive Command-Line Instructions.**
+7. **Follow the Interactive Command-Line Instructions.**
 
 ## License
 
