@@ -57,7 +57,7 @@ pip install biopython colorama
 The repository is structured as follows:
 
 ```
-├── malaria_gene_info_tool.py        # Main script file for running the tool
+├── MiniPlasmo.py        # Main script file for running the tool
 ├── ref_files                        # Directory containing reference files
 │   ├── 3D7.json                     # Example gene data JSON file for P. falciparum 3D7 strain
 │   ├── PlasmoDB-68_*.fasta          # Genomic FASTA files for various strains
