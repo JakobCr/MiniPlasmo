@@ -10,7 +10,7 @@ A Python-based tool for exploring and analyzing Plasmodium falciparum gene data 
 
 MiniPlasmo is a Python-based application designed to facilitate the exploration and analysis of genetic data related to various species and strains of *Plasmodium* (the causative agent of malaria). This tool enables users to search for gene-related information, perform codon recoding based on species-specific codon usage, and analyze exonic and genomic sequences for primer design and other research applications.
 
-The tool was originally developed during a period when PlasmoDB was temporarily offline due to funding issues. Since PlasmoDB's return, the tool has continued to evolve, incorporating additional features and improvements.
+The tool was originally developed during a period when PlasmoDB was expected to go offline due to funding issues. Since PlasmoDB's return, the tool has continued to evolve, incorporating additional features and improvements.
 
 The tool utilizes external resources like PlasmoDB and ToxoDB and integrates sequence alignment and recodonization capabilities, providing users with comprehensive information for studying the genomic data of these organisms.
 
@@ -94,4 +94,10 @@ The repository is structured as follows:
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## References
+
+Amos B, Aurrecoechea C, Barba M, Barreto A, Basenko EY, Bażant W, Belnap R, Blevins AS, Böhme U, Brestelli J, Brunk BP, Caddick M, Callan D, Campbell L, Christensen MB, Christophides GK, Crouch K, Davis K, DeBarry J, Doherty R, Duan Y, Dunn M, Falke D, Fisher S, Flicek P, Fox B, Gajria B, Giraldo-Calderón GI, Harb OS, Harper E, Hertz-Fowler C, Hickman MJ, Howington C, Hu S, Humphrey J, Iodice J, Jones A, Judkins J, Kelly SA, Kissinger JC, Kwon DK, Lamoureux K, Lawson D, Li W, Lies K, Lodha D, Long J, MacCallum RM, Maslen G, McDowell MA, Nabrzyski J, Roos DS, Rund SSC, Schulman SW, Shanmugasundram A, Sitnik V, Spruill D, Starns D, Stoeckert CJ, Tomko SS, Wang H, Warrenfeltz S, Wieck R, Wilkinson PA, Xu L, Zheng J. (2022). VEuPathDB: the eukaryotic pathogen, vector and host bioinformatics resource center. Nucleic acids research, 50(D1), D898–D911. https://doi.org/10.1093/nar/gkab929
+
+Fischer, S., Brunk, B. P., Chen, F., Gao, X., Harb, O. S., Iodice, J. B., Shanmugam, D., Roos, D. S., & Stoeckert, C. J., Jr (2011). Using OrthoMCL to assign proteins to OrthoMCL-DB groups or to cluster proteomes into new ortholog groups. Current protocols in bioinformatics, Chapter 6, Unit–6.12.19. https://doi.org/10.1002/0471250953.bi0612s35
 
