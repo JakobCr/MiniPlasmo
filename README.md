@@ -1,8 +1,9 @@
+
 # MiniPlasmo
+
 A Python-based tool for exploring and analyzing Plasmodium falciparum gene data retrieved from PlasmoDB and ToxoDB, including recodonization, genome alignment, and orthologue retrieval.
 
-**Author**: Jakob Cronshagen
-
+**Author**: Jakob Cronshagen  
 **Date Created**: August 14, 2024
 
 ## Overview
@@ -49,3 +50,46 @@ The tool uses several external libraries:
 You can install dependencies using:
 ```bash
 pip install biopython colorama
+```
+
+## Project Structure
+
+The repository is structured as follows:
+
+```
+├── malaria_gene_info_tool.py        # Main script file for running the tool
+├── ref_files                        # Directory containing reference files
+│   ├── 3D7.json                     # Example gene data JSON file for P. falciparum 3D7 strain
+│   ├── PlasmoDB-68_*.fasta          # Genomic FASTA files for various strains
+│   ├── groups_OrthoMCL-CURRENT.txt  # Orthogroup file for ortholog data
+└── README.md                        # This file, providing an overview and instructions
+```
+
+## How to Use
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/miniplasmo.git
+   ```
+
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd miniplasmo
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Tool:**
+   ```bash
+   python malaria_gene_info_tool.py
+   ```
+
+5. **Follow the Interactive Command-Line Instructions.**
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
