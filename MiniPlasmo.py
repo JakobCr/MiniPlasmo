@@ -12,8 +12,6 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 import re
 from colorama import Fore, Style, init
-global gene_data  # Ensure gene_data is global
-global unspliced_file
 genome_file = None
 strain = None
 
