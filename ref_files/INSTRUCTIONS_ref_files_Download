@@ -2,11 +2,11 @@
 
 The reference files required for this tool are not included in the repository due to their large size and potential legal issues. To use the tool, you'll need to download the necessary files from external resources. Follow the instructions below:
 
-1. **Strain Data (JSON Format):**  
+1. **Gene Data (JSON Format):**  
    Download the gene data for specific strains from PlasmoDB:
    - Go to the [PlasmoDB Transcript Search](https://plasmodb.org/plasmo/app/search/transcript/GeneByLocusTag).
-   - Provide a gene ID list from the `gene_id` folder for the search.
-   - Click **Download** and choose **JSON format**.
+   - Provide a gene ID list CSV files from the `GeneIDs_for_Download` folder for the search.
+   - Click **Download** above the search result list and choose **Standard JSON format** on the next page.
    - **Important:** Tick all available boxes, except for the Transcriptomics option (Download with these included doesn not work).
    
 2. **Genome FASTA Files:**  
@@ -22,5 +22,5 @@ The reference files required for this tool are not included in the repository du
 ### After Downloading
 Once the files have been downloaded:
 1. Place the JSON, FASTA, and OrthoMCL data in the `ref_files/` directory.
-2. The files wth the gene informations have to be renamed according to strain and path in the python script
+2. The JSON files with the gene data have to be renamed according to strain and path in the python script
 3. The tool will automatically detect and use these files during operation, as long as the ref_files folder is located in the same directory as the Python script.
