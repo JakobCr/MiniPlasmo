@@ -1,0 +1,26 @@
+## Data Files
+
+The reference files required for this tool are not included in the repository due to their large size. To use the tool, you'll need to download the necessary files from external resources. Follow the instructions below:
+
+1. **Strain Data (JSON Format):**  
+   Download the gene data for specific strains from PlasmoDB:
+   - Go to the [PlasmoDB Transcript Search](https://plasmodb.org/plasmo/app/search/transcript/GeneByLocusTag).
+   - Provide a gene ID list from the `gene_id` folder for the search.
+   - Click **Download** and choose **JSON format**.
+   - **Important:** Tick all available boxes, except for the Transcriptomics option (it is not compatible with this tool).
+   
+2. **Genome FASTA Files:**  
+   Download the genome FASTA file for the corresponding *Plasmodium* strains:
+   - Visit the [PlasmoDB Downloads page](https://plasmodb.org/plasmo/app/downloads).
+   - Choose the appropriate genome FASTA file for the strain you're working with (e.g., `PlasmoDB-68_Pfalciparum3D7_Genome.fasta`).
+
+3. **Ortholog Data (OrthoMCL Groups):**  
+   Download ortholog group data:
+   - Go to the [OrthoMCL Current Release Downloads](https://orthomcl.org/orthomcl/app/downloads/Current_Release/).
+   - Download the file `groups_OrthoMCL-6.21.txt.gz` and extract it.
+
+### After Downloading
+Once the files have been downloaded:
+1. Place the JSON, FASTA, and OrthoMCL data in the `ref_files/` directory.
+2. The files wth the gene informations have to be renamed according to strain and path in the python script
+3. The tool will automatically detect and use these files during operation.
