@@ -1,0 +1,1 @@
+This folder contains CSV files with all the gene IDs of the corresponding strains. These files can be uploaded to PlasmoDB or ToxoDB to retrieve information about all the genes.
