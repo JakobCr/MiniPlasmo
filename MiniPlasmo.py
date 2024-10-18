@@ -3,7 +3,28 @@
 Created on Wed Aug 14 10:35:11 2024
 
 @author: Jakob Cronshagen
+
+@script_name: MiniPlasmo.py
+@version: 0.4
+
+@description:
+This script is part of the MiniPlasmo tool, which facilitates the exploration and analysis of genetic data related to Plasmodium species.
+It allows for gene search, codon recoding based on species-specific codon usage, and genome alignment.
+
+@dependencies:
+- Biopython (pip install biopython)
+- Colorama (pip install colorama)
+
+@usage:
+Ensure the `ref_files` directory with required data files is in the same folder as the script.
+Note: The necessary reference files must be downloaded separately. Instructions for downloading these files from PlasmoDB and ToxoDB are provided in the `INSTRUCTIONS_ref_files_Download.md`. Place the downloaded files in the `ref_files/` directory
+Run the script to interact with the gene data using the provided menu options.
+Testing:
+Use the standard reference genome 3D7
+Some gene IDs for testing: PF3D7_0501300, PF3D7_0830500, PF3D7_1353200, PF3D7_1370300, PF3D7_0702300
+Some gene names for testing: REX, REX1, SBP1, kahrp, PfEMP1, UBP1, MAHRP
 """
+
 import json
 import os
 import sys
@@ -115,7 +136,7 @@ greeting_message = r"""
 .-%%%######%*=--%%+::-=#%%#%*.
 ..:%%###########%%%%######%*..  Data provided by VEuPathDB (PlasmoDB.com and ToxoDB.com)
 ....+%%#################%#:...  for non-commercial use only
-......:#%############%%*:.....  version 0.31
+......:#%############%%*:.....  version 0.4
 ..........:+*#%%%#*=..........  created by Jakob Cronshagen       
 
 Welcome to the genome analysis tool for gathering information about malaria genes
@@ -541,9 +562,9 @@ def main_menu_2():
 # Main menu function
 def main_menu():
     greet_user()
-    global gene_data  # Ensure gene_data is global
+    global gene_data  # Ensure variables are global
     global strain
-    global genome_file  # Ensure genome_sequences is global
+    global genome_file 
     
     
     while True:
