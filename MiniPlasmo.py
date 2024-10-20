@@ -45,12 +45,11 @@ def get_resource_path(relative_path):
     try:
         base_path = sys._MEIPASS  # PyInstaller's temp folder for bundled files
     except AttributeError:
-        base_path = os.path.abspath(".")  # Script's directory
+        base_path = os.path.dirname(os.path.abspath(__file__))  # Script's directory
 
     return os.path.join(base_path, relative_path)
 
-
-# file containing literature informations about all genes of the 3D7 strain
+# file containing literature informations about all genes of the 3D7 strain (future implementation)
 lit_file_3D7 = get_resource_path(os.path.join('ref_files', '3D7_Literature'))
 
 # Define a mapping of user choices to file details; strain ID in case needed in further development
