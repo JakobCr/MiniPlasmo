@@ -49,7 +49,8 @@ def get_resource_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
-# file containing literature informations about all genes of the 3D7 strain (future implementation)
+
+# file containing literature informations about all genes of the 3D7 strain
 lit_file_3D7 = get_resource_path(os.path.join('ref_files', '3D7_Literature'))
 
 # Define a mapping of user choices to file details; strain ID in case needed in further development
@@ -141,7 +142,7 @@ greeting_message = r"""
 Welcome to the genome analysis tool for gathering information about malaria genes
     """
 
-# Function to greet the user with an ASCII art
+# Function to greet
 def greet_user():
     print(greeting_message)
     input("Press Enter to continue...")
@@ -203,9 +204,8 @@ def search_gene(query):
     return results
 
 
-# Recodonize based on Plasmodium falciparum codon usage (or standard codon table)
+# Recodonize based on Plasmodium falciparum codon usage
 def recodonize(dna_seq):
-    # Use the codon table to optimize for Plasmodium falciparum usage
     recodonized_seq = ''
 
     for i in range(0, len(dna_seq), 3):
@@ -301,7 +301,7 @@ def recodonize_menu():
             print("Invalid input. Please enter 'id' or 'sequence'.")
 
 
-# Function to extract a specific region from a genomic record
+# Function to extract a specific region from a genomic record for faster alignment. So that the cds doesn´t always have to be aligned to the full genome
 def extract_genomic_region(chromosome_id, start, end, strand='+'):
     # Parse the genome FASTA file
     genome_records = SeqIO.to_dict(SeqIO.parse(genome_file, "fasta"))
@@ -310,7 +310,7 @@ def extract_genomic_region(chromosome_id, start, end, strand='+'):
     if chromosome_id in genome_records:
         record = genome_records[chromosome_id]
         # Extract the region -500 and +500 of transcripted region
-        region_seq = record.seq[start-50:end+500]
+        region_seq = record.seq[start-500:end+500]
         
         # Check strand orientation
         if strand == '-':
@@ -335,7 +335,7 @@ def parse_location(location_text):
     else:
         raise ValueError(f"Invalid location format: {location_text}")
 
-# Shows the CDS in the context of the genome sequence to show intron sequence, upstream und downstream sequence; Helpfull for primer design
+# Shows the CDS in the context of the genome sequence to show intron sequence, upstream und downstream sequence; Helpful for primer design
 def align_cds_to_genome(gene_id, cds_sequence, location_text):
     chromosome, start_position, end_position, strand_orientation = parse_location(location_text)
     extracted_sequence = extract_genomic_region(chromosome, start_position, end_position, strand_orientation)
@@ -359,7 +359,6 @@ def align_cds_to_genome(gene_id, cds_sequence, location_text):
     aligned_genomic = best_alignment[1]  # Access the second sequence
     # Highlight matched bases
     highlighted_genomic = []
-
     for i in range(len(aligned_genomic)):
         if aligned_genomic[i] == aligned_cds[i] and aligned_genomic[i] != '-':
             # Use green for matched bases
@@ -420,7 +419,7 @@ def show_literature(gene_id):
 
 
 
-
+# Function for further options with the search hit
 def search_hit_options(gene_id):
     while True:
         command = input(
@@ -491,6 +490,7 @@ def pick_gene_from_multiple_matches(search_results):
         except ValueError:
             print("Invalid input. Please enter a number or type 'exit' to go back.")
 
+# Function that handles the search input
 def search_menu():
     while True:
         query = input("Enter 'exit' to return\nEnter Gene ID(s) (separated by commas), Gene Name, Previous ID, or part of Gene Product: ").strip()
@@ -587,4 +587,3 @@ def main_menu():
 
 if __name__ == "__main__":
     main_menu()
-
